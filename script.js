@@ -1,3 +1,14 @@
+// Function to display a personalized motivational message
+function showMessage() {
+    let name = document.getElementById("nameInput").value;
+    if (name) {
+        document.getElementById("personalMessage").innerHTML = `🎀 ${name}, may Hello Kitty's good luck charm guide you to success on your exam! 💖`;
+    } else {
+        document.getElementById("personalMessage").innerHTML = "🎀 May Hello Kitty's good luck charm guide you to success on your exam! 💖";
+    }
+}
+
+// Countdown function to track time until 7:00 AM tomorrow
 function startCountdown() {
     let now = new Date();
     let examDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 7, 0, 0, 0); // Set to 7:00 AM tomorrow
@@ -23,4 +34,35 @@ function startCountdown() {
     updateCountdown();
 }
 
+// Confetti effect to celebrate exam time
+function pinkConfetti() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#ff69b4', '#ff1493', '#ff80b3']
+    });
+}
+
+// Function to display a random motivational quote
+function showQuote() {
+    const quotes = [
+        "💖 Believe in yourself and sparkle like Hello Kitty!",
+        "🎀 Success is sweeter with hard work!",
+        "💗 Stay cute, stay confident, and ace that exam!",
+        "🎀 Every answer is a step toward your dreams!",
+        "💖 Keep smiling and keep learning!"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote").innerText = quotes[randomIndex];
+}
+
+// Toggle between light and dark themes
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+
+// Start the countdown and show a random quote on page load
 startCountdown();
+showQuote();
