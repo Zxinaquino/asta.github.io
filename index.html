@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀 Hello Kitty Exam Luck! 💖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">🌸 Light / Dark 🌙</button>
+    </div>
+
+    <div class="container">
+        <h1>🎀 Good Luck on Your Exam Tomorrow! 💖</h1>
+        
+        <p>Enter your name for a personalized message:</p>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <button onclick="showMessage()">💗 Get Motivation 💗</button>
+        <p id="personalMessage"></p>
+
+        <h2>⏳ Countdown to Exam:</h2>
+        <div id="countdown"></div>
+
+        <h2>💡 Today's Motivation:</h2>
+        <p id="quote"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+</body>
+</html>
